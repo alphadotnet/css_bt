@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục HTML</title>
+    <style>
+        #wrapper {
+            width: 400px;
+            margin: 0 auto;
+            border: 2px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        header,
+        footer {
+            height: 50px;
+            border: 2px solid black;
+            text-align: left;
+        }
+
+        .content {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        nav {
+            width: 50px;
+            height: 200px;
+            border: 2px solid black;
+            text-align: top;
+            margin-right: 10px;
+        }
+
+        main {
+            flex-grow: 1;
+            height: 200px;
+            border: 2px solid black;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <span style="margin-left: 560px; display: block;">wrapper</span>
+    <div id="wrapper">
+        <header>header</header>
+        <div class="content">
+            <nav>nav</nav>
+            <main>main</main>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>

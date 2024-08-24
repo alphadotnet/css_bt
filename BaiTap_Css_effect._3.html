@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng Hover Đơn Giản</title>
+    <style>
+        /* styles.css */
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+            /* Màu nền xanh nhạt */
+        }
+
+        .hover-effect {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://www.example.com/model.jpg');
+            /* Hình nền mẫu */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            color: rgb(204, 196, 34);
+            border: 2px solid transparent;
+            transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+
+        .hover-effect:hover {
+            transform: translateX(50px) rotate(10deg);
+            /* Di chuyển và xoay một chút */
+            background-color: rgba(0, 0, 0, 0.3);
+            /* Làm mờ hình nền khi hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hover-effect">
+        Hover over me!
+    </div>
+</body>
+
+</html>

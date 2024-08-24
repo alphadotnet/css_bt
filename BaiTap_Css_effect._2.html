@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu Ứng Text</title>
+    <style>
+        /* Đặt lại các kiểu cơ bản */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #5df620;
+        }
+
+        /* Hiệu ứng text-shadow-multicolor */
+        .text-effect {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 15px yellow, 0 0 20px green, 0 0 25px blue, 0 0 30px indigo, 0 0 35px violet;
+            animation: slide-in-elliptic-right-bck 5s infinite, text-shadow-animation 5s infinite;
+            /* Căn giữa văn bản */
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Hiệu ứng slide-in-elliptic-right-bck */
+        @keyframes slide-in-elliptic-right-bck {
+            0% {
+                transform: translateX(100%) scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Hiệu ứng text-shadow-animation */
+        @keyframes text-shadow-animation {
+            0% {
+                text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 15px yellow, 0 0 20px green, 0 0 25px blue, 0 0 30px indigo, 0 0 35px violet;
+            }
+
+            100% {
+                text-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow, 0 0 40px green, 0 0 50px blue, 0 0 60px indigo, 0 0 70px violet;
+            }
+        }
+
+        /* Hiệu ứng nhấp nháy */
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .blink-effect {
+            animation: blink 1s infinite;
+        }
+
+        /* Hiệu ứng nở rộng */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse-effect {
+            animation: pulse 2s infinite;
+        }
+
+        /* Hiệu ứng đổ bóng 3D */
+        @keyframes shadow3d {
+            0% {
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(255, 255, 255, 0.3);
+            }
+
+            100% {
+                text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .shadow3d-effect {
+            animation: shadow3d 2s infinite alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-effect">Đại học UEH</h1>
+</body>
+
+</html>
